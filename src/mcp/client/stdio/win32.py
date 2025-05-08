@@ -6,7 +6,7 @@ import shutil
 import subprocess
 import sys
 from pathlib import Path
-from typing import List, TextIO
+from typing import TextIO
 import psutil
 import anyio
 from anyio.abc import Process
@@ -97,7 +97,7 @@ async def terminate_windows_process(process: Process):
     await terminate_psutil_process([parent])
     
 
-async def terminate_psutil_process(processes: List[psutil.Process]):
+async def terminate_psutil_process(processes: list[psutil.Process]):
     """
     Terminate a Windows process.
 
