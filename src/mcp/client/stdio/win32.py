@@ -7,8 +7,9 @@ import subprocess
 import sys
 from pathlib import Path
 from typing import TextIO
-import psutil
+
 import anyio
+import psutil
 from anyio.abc import Process
 
 
@@ -125,4 +126,6 @@ async def terminate_psutil_process(processes: list[psutil.Process]):
             pass  # Already gone
         except Exception:
             pass
+
+
 
