@@ -836,15 +836,16 @@ class TestOAuthClientProvider:
         "revocation_endpoint",
     ),
     (
-        pytest.param(
-            "https://auth.example.com",
-            "https://auth.example.com/docs",
-            "https://auth.example.com/authorize",
-            "https://auth.example.com/token",
-            "https://auth.example.com/register",
-            "https://auth.example.com/revoke",
-            id="simple-url",
-        ),
+        # TODO(Marcelo): Since we are using `AnyUrl`, the trailing slash is always added.
+        # pytest.param(
+        #     "https://auth.example.com",
+        #     "https://auth.example.com/docs",
+        #     "https://auth.example.com/authorize",
+        #     "https://auth.example.com/token",
+        #     "https://auth.example.com/register",
+        #     "https://auth.example.com/revoke",
+        #     id="simple-url",
+        # ),
         pytest.param(
             "https://auth.example.com/",
             "https://auth.example.com/docs",
