@@ -3,6 +3,7 @@ import pytest
 from mcp.server.fastmcp import FastMCP
 
 pytestmark = pytest.mark.anyio
+# Test comment to verify CI behavior
 
 
 async def test_list_tools_returns_all_tools():
