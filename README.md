@@ -721,8 +721,8 @@ If you'd like your server to be accessible by browser-based MCP clients, you'll 
 from starlette.middleware.cors import CORSMiddleware
 
 # Add CORS middleware to your Starlette app
-app.add_middleware(
-    CORSMiddleware,
+app = CORSMiddleware(
+    app,
     allow_origins=["*"],  # Configure appropriately for production
     allow_methods=["GET", "POST", "DELETE"],  # MCP streamable HTTP methods
     expose_headers=["Mcp-Session-Id"],
